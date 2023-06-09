@@ -32,6 +32,7 @@ with open(geoJSONFile) as response:
 #build dash components (every dash app has components that are displayed on the page through layout which interact with eachother through the call back )
 
 app=Dash(__name__,external_stylesheets=[dbc.themes.LUX])
+server=app.server
 mytitle=dcc.Markdown(children='')
 mygraph=dcc.Graph(figure={})
 dropdown=dcc.Dropdown(options=df.columns.values[6:8],
@@ -80,4 +81,4 @@ def update_graph(column_name):
 
 #Run app
 if __name__=='__main__':
-    app.run_server(port=8056)
+    app.run_server(debug=FALSE)
