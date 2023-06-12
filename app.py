@@ -5,7 +5,7 @@ from dash import Dash,dcc,Output,Input
 import dash_bootstrap_components as dbc
 #import dash_deck
 import dash_html_components as html
-import pydeck as pdk
+#import pydeck as pdk
 import pandas as pd
 import plotly.express as px
 import pathlib  #just for deploy on server when reading csv from local
