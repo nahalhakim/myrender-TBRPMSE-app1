@@ -12,16 +12,16 @@ import pathlib  #just for deploy on server when reading csv from local
 
 PATH = pathlib.Path(__file__).parent  #just for deploy on server when reading csv from local
 DATA_PATH = PATH.joinpath("data").resolve()  #just for deploy on server when reading csv from local
-df=pd.read_csv(DATA_PATH.joinpath("TBRPM_SE_ALL.csv"))  #just for deploy on server when reading csv from local
+#df=pd.read_csv(DATA_PATH.joinpath("TBRPM_SE_ALL.csv"))  #just for deploy on server when reading csv from local
 
-#df = pd.read_csv('TBRPM_SE_ALL.csv')
+df = pd.read_csv('TBRPM_SE_ALL.csv')
 ## df_POP = pd.read_csv('data/TBRPM_SE_ALL.csv',
 ##                    dtype = {"ZONE": str})
 ## df_POP['POPEMP']=df_POP['POP']+df_POP['EMP']
 ## print(df_POP)
 
-geoJSONFile = DATA_PATH.joinpath("TBRPM_TAZ_WGS84_Project.geojson")  #just for deploy on server when reading csv from local
-#geoJSONFile = 'data/TBRPM_TAZ_WGS84_Project.geojson'
+#geoJSONFile = DATA_PATH.joinpath("TBRPM_TAZ_WGS84_Project.geojson")  #just for deploy on server when reading csv from local
+geoJSONFile = 'TBRPM_TAZ_WGS84_Project.geojson'
 with open(geoJSONFile) as response:
     polygons = json.load(response)
 
